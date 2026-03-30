@@ -19,7 +19,6 @@ body {
 /* Container centered with max size */
 .container {
   background-color: transparent;
-}
   max-width: 800px;
   width: 90vw;
   max-height: 90vh;
