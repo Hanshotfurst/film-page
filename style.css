@@ -1,38 +1,49 @@
-/* Reset default margins */
-body, html {
+/* Make body and html take full viewport height */
+html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  height: 100vh;  /* 100% viewport height */
+  overflow: hidden; /* prevent scrolling */
 }
 
-/* Background image */
+/* Background image stays full screen */
 body {
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* center vertically */
 }
 
-/* Container for content */
+/* Container centered with max size */
 .container {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent */
+  background-color: rgba(255, 255, 255, 0.9);
   max-width: 800px;
-  margin: 50px auto;
-  padding: 30px;
+  width: 90vw;
+  max-height: 90vh;
+  padding: 20px;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden; /* avoid overflow */
 }
 
 /* Title image */
 .title-image {
   width: 70%;
+  max-height: 15vh;
+  object-fit: contain;
   margin-bottom: 20px;
 }
 
-/* Video wrapper (responsive) */
+/* Responsive video wrapper with max height */
 .video-wrapper {
   position: relative;
+  width: 100%;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
+  max-height: 50vh;
   margin-bottom: 20px;
 }
 .video-wrapper iframe {
@@ -46,5 +57,6 @@ body {
 /* IMDb logo */
 .imdb-logo {
   width: 150px;
-  margin-top: 10px;
+  max-height: 10vh;
+  object-fit: contain;
 }
