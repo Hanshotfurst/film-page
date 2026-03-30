@@ -52,8 +52,8 @@ body {
 }
 
 .imdb-logo {
-  width: 80px;      
-  max-height: 6%;    
+  width: 60px;       
+  max-height: 5%;    
   object-fit: contain;
   margin-top: 10px;
 }
