@@ -1,59 +1,50 @@
-html, body {
+/* Reset default margins */
+body, html {
   margin: 0;
   padding: 0;
-  height: 100vh;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
+  height: 100%;
 }
 
+/* Background image */
 body {
   background: url('images/background.jpg') no-repeat center center fixed;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: Arial, sans-serif;
 }
 
+/* Container for content */
 .container {
-  width: 90vw;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9); /* slightly transparent */
   max-width: 800px;
-  max-height: 90vh;
-  padding: 20px;
+  margin: 50px auto;
+  padding: 30px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  background-color: transparent;
-  color: white;
 }
 
+/* Title image */
 .title-image {
   width: 70%;
-  max-height: 15vh;
-  object-fit: contain;
   margin-bottom: 20px;
 }
 
+/* Video wrapper (responsive) */
 .video-wrapper {
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%;
-  max-height: 50vh;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
   margin-bottom: 20px;
 }
-
 .video-wrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  border: none;
 }
 
+/* IMDb logo */
 .imdb-logo {
   width: 150px;
-  max-height: 10vh;
-  object-fit: contain;
+  margin-top: 10px;
 }
